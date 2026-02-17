@@ -22,22 +22,6 @@ Alur kerja sistem:
 6. Backend mengirim respons ke frontend
 7. Frontend menampilkan balasan AI
 
-## Struktur Project
-
-dazo/
-├── dazo-be-test/
-│ ├── app.js
-│ ├── chat.js
-│ ├── bantuan_export.js
-│ ├── kridensial.js
-│ └── luaran/
-│
-├── dazo-fe-test/
-│ ├── src/
-│ └── index.html
-│
-└── README.md
-
 ## Teknologi yang Digunakan
 
 Backend:
