@@ -25,14 +25,12 @@ Alur kerja sistem:
 ## Teknologi yang Digunakan
 
 Backend:
-
 - Node.js (Express)
 - LangChain JS
 - Google Gemini API
 - ExcelJS
 
 Frontend:
-
 - Vue.js 3 (Vite)
 - Ant Design Vue
 - Markdown Renderer
@@ -46,101 +44,94 @@ Data Output:
 
 Clone repository:
 
-git clone <REPOSITORY_URL>
+```
+git clone https://github.com/NamriHolmes-indo/TestDazo
 cd dazo
+```
 
 ## Setup Backend
 
 Masuk ke folder backend:
-
+```
 cd dazo-be-test
-
+```
 Install dependency:
-
+```
 npm install
+```
+> [!IMPORTANT]
+> ### Konfigurasi Environment Backend
 
-### Konfigurasi Environment Backend
-
-Buat file:
-
-dazo-be-test/.env
+Buat file: ``dazo-be-test/.env``
 
 Isi:
-
-PORT=3000
-GOOGLE_API_KEY=YOUR_GEMINI_API_KEY
-
-Keterangan:
-PORT → port server backend  
-GOOGLE_API_KEY → API key Gemini untuk LLM
+```
+PORT=8121
+GOOGLE_API_KEY=GEMINI_API_ANDA
+```
+> [!TIP]
+> PORT → port server backend  
+> GOOGLE_API_KEY → API key Gemini untuk LLM
 
 ### Menjalankan Backend
-
+```
 node app.js
+```
+> [!WARNING]
+> Jalankan ini di folder dazo-be-test
 
-Server berjalan di:
-
-http://localhost:PORT
-
-Endpoint API chatbot:
-
-POST /api/chat
+Server berjalan di: ``http://localhost:PORT``
+Endpoint API chatbot: ``POST /api/chat``
 
 ## Setup Frontend
 
-Masuk ke folder frontend:
-
+> [!WARNING]
+> Masuk ke folder frontend:
+```
 cd ../dazo-fe-test
-
+```
 Install dependency:
-
+```
 npm install
-
+```
 ### Konfigurasi Environment Frontend
 
-Buat file:
-
-dazo-fe-test/.env
+> [!IMPORTANT]
+> Buat file: ``dazo-fe-test/.env``
 
 Isi:
-
-VITE_API_URL=http://localhost:3000/api/chat
-
+```VITE_API_URL=http://localhost:8121/api/chat```
 ### Menjalankan Frontend
-
+```
 npm run dev
-
+```
 Akses aplikasi melalui:
-
+```
 http://localhost:5173
-
+```
 ## Endpoint API
 
-POST /api/chat
+``POST /api/chat``
 
 Request:
-
+```
 {
 "message": "Saya tertarik paket premium"
 }
-
+```
 Response:
-
+```
 {
 "reply": "Paket premium cocok untuk bisnis Anda.",
 "interestedProduct": "Paket Premium"
 }
-
+```
 ## Penyimpanan Data Excel
+> File Excel dibuat otomatis dan data ditambahkan setiap ada ketertarikan produk.
 
-File Excel dibuat otomatis dan data ditambahkan setiap ada ketertarikan produk.
-
-Lokasi file:
-
-dazo-be-test/luaran/
+Lokasi file: ``dazo-be-test/luaran/``
 
 Format kolom:
-
 - Tanggal (WIB)
 - Nama Produk
 - Pesan User
@@ -151,7 +142,6 @@ Data selalu ditambahkan tanpa overwrite.
 ## Error Handling
 
 Sistem menangani kondisi berikut:
-
 - Input kosong
 - Backend error
 - API key tidak tersedia
@@ -166,11 +156,3 @@ Server tetap berjalan tanpa crash.
 - Menggunakan environment variable
 - File Excel dibuat otomatis jika belum ada
 - Data Excel bersifat append-only
-
-## Pengembangan Selanjutnya
-
-- Conversation memory
-- Streaming response
-- Download Excel dari UI
-- Containerization dengan Docker
-- Deployment cloud
