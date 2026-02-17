@@ -2,7 +2,7 @@
 
 Fullstack AI Engineer Technical Test — PT. Dazo Kreatif Indonesia
 
-Author: Naufal Ammar Badri
+Author: [Naufal Ammar Badri](https://namri.vercel.app/)
 
 ## Deskripsi
 
