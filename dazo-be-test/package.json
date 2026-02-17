@@ -1,0 +1,24 @@
+{
+  "name": "dazo-be-test",
+  "version": "1.0.0",
+  "description": "ini adalah backend untuk chatbot test dazo saya",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "author": "Naufal Ammar Badri",
+  "license": "ISC",
+  "dependencies": {
+    "@google/genai": "^1.41.0",
+    "@langchain/core": "^1.1.24",
+    "@langchain/google": "^0.1.0",
+    "@langchain/google-genai": "^2.1.18",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "exceljs": "^4.4.0",
+    "express": "^5.2.1",
+    "langchain": "^1.2.24",
+    "openai": "^6.22.0"
+  }
+}

@@ -1,0 +1,27 @@
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+}
+
+.chat-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat-container {
+  width: 90vw;
+  max-width: 1200px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
