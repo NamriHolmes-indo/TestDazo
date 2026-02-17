@@ -12,15 +12,7 @@ Sistem dibangun menggunakan arsitektur fullstack monorepo yang terdiri dari fron
 
 ## Arsitektur Sistem
 
-Alur kerja sistem:
-
-1. Pengguna mengirim pesan melalui antarmuka chatbot
-2. Frontend mengirim request HTTP ke backend
-3. Backend memproses pesan menggunakan LangChain dan model Gemini
-4. AI menentukan apakah terdapat ketertarikan terhadap produk
-5. Jika ada ketertarikan, data disimpan ke file Excel
-6. Backend mengirim respons ke frontend
-7. Frontend menampilkan balasan AI
+![alt text](https://github.com/NamriHolmes-indo/TestDazo/blob/main/flow%20program.jpg "Flow kerja program")
 
 ## Teknologi yang Digunakan
 
